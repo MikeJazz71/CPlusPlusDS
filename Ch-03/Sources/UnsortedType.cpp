@@ -11,70 +11,86 @@
 //	Constructors.
 UnsortedType::UnsortedType(void)
 {
-	currentPosition = 0;
 	length = 0;
+	currentPosition = 0; 
 }
 
 //	Transformers.
 void UnsortedType::makeEmpty(void)
 {
 	length = 0;
+	currentPosition = 0; 
 }
 void UnsortedType::putItem(ItemType item)
 {
-	info[length++] = item;
+	info[length] = item;
+	length++; 
+	
 }
 void UnsortedType::deleteItem(ItemType item)
 {
+
 	int location = 0;
+	bool moreToSearch = location < length;
 
-	while (item.comparedTo(info[location]) != EQUAL)
+	while (item.comparedTo(location) != EQUAL)
 	{
-		location++;
-	}
-	info[location] = info[length-- - 1];
-}
+		info[location] = info[length - 1];
+		length--; 
 
+	}
+
+}
 //	Observers.
 bool UnsortedType::isFull(void) const
 {
-	return length == MAX_ITEMS;
+	return (length == MAX_ITEMS); 
 }
 int UnsortedType::getLength(void) const
 {
-	return length;
+	return length; 
 }
 
 //	Iterators.
 void UnsortedType::resetList(void)
 {
-	currentPosition = -1;
+	currentPosition = -1; 
 }
 ItemType UnsortedType::getItem(ItemType item, bool &found)
 {
-	bool moreToSearch;
-	int location = 0;
+	currentPosition = 0;
 	found = false;
-
-	moreToSearch = location < length;
+	
+	int location = 0;
+	bool moreToSearch = location < length;
 
 	while (moreToSearch && !found)
 	{
-		switch (item.comparedTo(info[location]))
+		switch (item.comparedTo((location)))
 		{
 		case LESS:
-		case GREATER:
-			moreToSearch = ++location < length;
+
+		case GREATER: moreToSearch = location++ < length;
 			break;
-		default:
-			found = true;
+
+		case EQUAL: found = true;
+
+			
+			
+			
+			
 		}
+		
 	}
-	return item;
+
+	return item; 
+
+	
+	
 }
 ItemType UnsortedType::getNextItem(void)
 {
-	return info[++currentPosition];
+	return info[currentPosition++]; 
 }
 
 #endif //UNSORTEDTYPE_CPP

@@ -1,0 +1,12 @@
+﻿  UnsortedList.cpp
+UnsortedType.obj : error LNK2005: "public: __thiscall ItemType::ItemType(int)" (??0ItemType@@QAE@H@Z) already defined in ItemType.obj
+UnsortedType.obj : error LNK2005: "public: __thiscall ItemType::ItemType(void)" (??0ItemType@@QAE@XZ) already defined in ItemType.obj
+UnsortedType.obj : error LNK2005: "public: enum RelationType __thiscall ItemType::comparedTo(class ItemType)const " (?comparedTo@ItemType@@QBE?AW4RelationType@@V1@@Z) already defined in ItemType.obj
+UnsortedType.obj : error LNK2005: "public: void __thiscall ItemType::initialize(int)" (?initialize@ItemType@@QAEXH@Z) already defined in ItemType.obj
+UnsortedType.obj : error LNK2005: "public: void __thiscall ItemType::print(class std::basic_ostream<char,struct std::char_traits<char> > &)const " (?print@ItemType@@QBEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z) already defined in ItemType.obj
+UnsortedList.obj : error LNK2005: "public: __thiscall ItemType::ItemType(int)" (??0ItemType@@QAE@H@Z) already defined in ItemType.obj
+UnsortedList.obj : error LNK2005: "public: __thiscall ItemType::ItemType(void)" (??0ItemType@@QAE@XZ) already defined in ItemType.obj
+UnsortedList.obj : error LNK2005: "public: enum RelationType __thiscall ItemType::comparedTo(class ItemType)const " (?comparedTo@ItemType@@QBE?AW4RelationType@@V1@@Z) already defined in ItemType.obj
+UnsortedList.obj : error LNK2005: "public: void __thiscall ItemType::initialize(int)" (?initialize@ItemType@@QAEXH@Z) already defined in ItemType.obj
+UnsortedList.obj : error LNK2005: "public: void __thiscall ItemType::print(class std::basic_ostream<char,struct std::char_traits<char> > &)const " (?print@ItemType@@QBEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z) already defined in ItemType.obj
+C:\Users\big_j\source\repos\CPP-Plus-Data-Structures\Ch-03\UnsortedList\Debug\UnsortedList.exe : fatal error LNK1169: one or more multiply defined symbols found
