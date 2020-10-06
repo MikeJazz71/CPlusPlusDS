@@ -14,69 +14,91 @@
 //	Constructors.
 StackType::StackType(void)
 {
-    topPtr = NULL;
+	topPtr = NULL; 
 }
 StackType::~StackType()
 {
-    while (topPtr != NULL)
-    {
-        NodeType *tempPtr = topPtr;
-        topPtr = topPtr->nextPtr;
-        delete tempPtr;
-    }
+
+	NodeType* tempPtr; 
+	while (topPtr != NULL)
+	{
+		tempPtr = topPtr;
+		topPtr = topPtr->nextPtr;
+		delete tempPtr; 
+		
+	}
 }
 
 //	Transformers.
 void StackType::Push(ItemType newItem)
 {
-    if (IsFull())
-    {
-        throw FullStack();
-    }
-    NodeType *location = new NodeType;
-    location->info = newItem;
-    location->nextPtr = topPtr;
-    topPtr = location;
+	if (IsFull())
+	
+
+		throw FullStack();
+
+	else
+	{
+
+		NodeType* location;
+		location = new NodeType;
+		location->info = newItem;
+		location->nextPtr = topPtr;
+		topPtr = location; 
+	}
+	
 }
 void StackType::Pop(void)
 {
-    if (IsEmpty())
-    {
-        throw EmptyStack();
-    }
-    NodeType *tempPtr = topPtr;
-    topPtr = topPtr->nextPtr;
-    delete tempPtr;
+	if (IsEmpty())
+		throw EmptyStack();
+	else
+	{
+		NodeType* tempPtr;
+		tempPtr = topPtr;
+		topPtr = topPtr->nextPtr;
+		delete tempPtr; 
+
+
+		
+	}
+
+	
 }
 
 //	Observers.
 bool StackType::IsFull(void) const
 {
-    NodeType *location;
-    try
-    {
-        location = new NodeType;
-    }
-    catch (std::bad_alloc exception)
-    {
-        return true;
-    }
-    delete location;
-    return false;
+	NodeType* location;
+
+	try
+	{
+
+		location = new NodeType;
+		delete location;
+		return false;
+		
+	}
+
+	catch (std::bad_alloc _EXCEPTION_)
+	{
+
+		return true; 
+	}
 }
 bool StackType::IsEmpty(void) const
 {
-    return topPtr == NULL;
+	return (topPtr == NULL); 
 }
 
 //	Iterators.
 ItemType StackType::Top(void) const
 {
-    if (IsEmpty())
-    {
-        throw EmptyStack();
-    }
-    return topPtr->info;
+	if (IsEmpty())
+		throw EmptyStack();
+
+	else
+		return topPtr->info; 
 }
 
 #endif //STACKTYPE_CPP
