@@ -32,7 +32,7 @@ public:
 
     //	Transformers.
     void Enqueue(ItemType);
-    void Dequeue(void);
+    void Dequeue(ItemType&);
     void MakeEmpty(void);
 
     //	Observers.

@@ -6,12 +6,6 @@
 
 //	Class Specification.
 
-enum RelationType
-{
-    LESS = -1,
-    GREATER,
-    EQUAL
-};
 
 template <class ItemType>
 struct NodeType

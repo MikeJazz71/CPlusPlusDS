@@ -33,15 +33,15 @@ RelationType ItemType::comparedTo(ItemType OtherItem) const
 {
 	if (value < OtherItem.value)
 	{
-		return LESS;
+		return RelationType::LESS;
 	}
 	else if (value > OtherItem.value)
 	{
-		return GREATER;
+		return RelationType::GREATER;
 	}
 	else
 	{
-		return EQUAL;
+		return RelationType::EQUAL;
 	}
 }
 

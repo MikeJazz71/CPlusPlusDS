@@ -8,12 +8,12 @@
 
 #include <fstream>
 
-enum RelationType
+enum class RelationType
 {
 	LESS = -1,
 	GREATER,
 	EQUAL
-};
+}; 
 
 class ItemType
 {
