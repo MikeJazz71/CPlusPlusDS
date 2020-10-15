@@ -89,12 +89,12 @@ void SortedCircularLinkedType<ItemType>::putItem(ItemType item)
 		newNode->next = predLocation->next;
 		predLocation->next = newNode;
 
-		if (listData->info < item)
+		if (listData->info < item) //Last Item in the List
 		{
 			listData = newNode; 
 		}
 
-		else
+		else // Empty List
 		{
 			listData = newNode;
 			newNode->next = newNode; 

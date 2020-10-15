@@ -8,7 +8,7 @@
 
 #include <fstream>
 
-enum class RelationType
+enum RelationType
 {
 	LESS = -1,
 	GREATER,

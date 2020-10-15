@@ -8,12 +8,6 @@
 
 #include "../../ItemType.cpp"
 
-enum RelationType
-{
-    LESS = -1,
-    GREATER,
-    EQUAL
-};
 
 struct NodeType
 {
